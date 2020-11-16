@@ -22,13 +22,12 @@ export default class ModalAdd extends Component {
 				<div className="modal-dialog modal-dialog-centered">
 					<form className="modal-content form-group">
 						<div className="modal-header">
-							<input className="modal-title form-control font-weight-bold" minLength={3} maxLength={30} onChange={this.getInputsValue} style={{ fontSize: '3vh' }} type='text' placeholder='Title announcement' id="exampleModalLabel" />
-							<button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<input className="modal-title form-control font-weight-bold" minLength={2} maxLength={30} onChange={this.getInputsValue} style={{ fontSize: '3vh' }} type='text' placeholder='Title announcement' id="exampleModalLabel" />
 						</div>
 						<div className="modal-body">
 							<span className='card-subtitle text-muted right-align' onChange={this.getInputsValue}><i className="fa fa-calendar"></i> <span className='font-weight-bold'>{this.adDate()}</span></span>
-							<textarea className="form-control mt-2" minLength={10} maxLength={295} onChange={this.getInputsValue} rows="3" placeholder='Description announcement' />
-							<input className='col-12 mt-2 inputContact' minLength={7} maxLength={40} onChange={this.getInputsValue} type='text' placeholder='Contact data' />
+							<textarea className="form-control mt-2" minLength={2} maxLength={295} onChange={this.getInputsValue} rows="3" placeholder='Description announcement' />
+							<input className='form-control col-12 mt-2 inputContact' minLength={2} maxLength={40} onChange={this.getInputsValue} type='text' placeholder='Contact data' />
 						</div>
 						<div className="modal-footer d-flex justify-content-center">
 							<button type="button" className="btn btn-light" data-dismiss="modal">Close</button>

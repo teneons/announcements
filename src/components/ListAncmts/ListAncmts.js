@@ -5,7 +5,7 @@ export default class ListAncmt extends Component {
   render() {
 
     return (
-      <div className='container mt-4 col-sm-12 col-md-8 col-lg-6'>
+      <div className='container mt-4 col-sm-12 col-md-8 col-lg-5 shadow p-3'>
         <ul className="list-group">
           <li className="list-group-item">Cras justo odio</li>
           <li className="list-group-item">Dapibus ac facilisis in</li>

@@ -1,7 +1,10 @@
+import React, { Component } from 'react';
 import Header from '../Header/Header';
-import ListAncmts from '../ListAncmts/ListAncmts'
+import ListAncmts from '../ListAncmts/ListAncmts';
 
-function App() {
+
+export default class App extends Component {
+  render() {
   return (
     <div className="App">
       <Header />
@@ -9,5 +12,4 @@ function App() {
     </div>
   );
 }
-
-export default App;
+}

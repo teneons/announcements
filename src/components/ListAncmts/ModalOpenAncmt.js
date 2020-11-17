@@ -5,11 +5,11 @@ export default class ModalOpenAncmt extends Component {
   render() {
 
     return (
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header bg-warning">
-              <h5 class="modal-title fs-4 fw-bold" id="exampleModalLabel">
+      <div className="modal fade" id="modalOpen" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+            <div className="modal-header bg-warning">
+              <h5 className="modal-title fs-4 fw-bold" id="exampleModalLabel">
                 <svg width="0.8em" height="0.8em" viewBox="0 0 16 16" className="bi bi-info-square mr-1 text-white" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path fillRule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
                   <path fillRule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
@@ -18,9 +18,9 @@ export default class ModalOpenAncmt extends Component {
                 </svg>
                 <span className='text-white'>Title</span>
               </h5>
-              <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+              <button type="button" className="btn-close" data-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div className="modal-body">
 
               <p >
                 <svg width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-calendar2-event mr-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

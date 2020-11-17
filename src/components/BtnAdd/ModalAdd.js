@@ -27,7 +27,7 @@ class ModalAdd extends Component {
 				<div className="modal-dialog modal-dialog-centered">
 					<form className="modal-content form-group">
 						<div className="modal-header">
-							<input className="modal-title form-control font-weight-bold" ref={(data)=> this.txtTitle = data} minLength={2} maxLength={30} style={{ fontSize: '3vh' }} type='text' placeholder='Title announcement' id="exampleModalLabel" />
+							<input className="modal-title form-control fw-bold text-secondary" ref={(data)=> this.txtTitle = data} minLength={2} maxLength={30} type='text' placeholder='Title announcement' id="exampleModalLabel" required />
 						</div>
 						<div className="modal-body">
 							<span className='card-subtitle text-muted right-align'>
@@ -36,8 +36,8 @@ class ModalAdd extends Component {
   								<path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4zM11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
 								</svg>
 							<span className='fw-bold' ref={(data)=> this.txtDate = data}>{this.adDate()}</span></span>
-							<textarea className="form-control mt-2" ref={(data)=> this.txtDescription = data} minLength={2} maxLength={295} rows="3" placeholder='Description announcement' />
-							<input className='form-control col-12 mt-2 inputContact' ref={(data)=> this.txtContact = data} minLength={2} maxLength={40} type='text' placeholder='Contact data' />
+							<textarea className="form-control mt-2" ref={(data)=> this.txtDescription = data} minLength={2} maxLength={295} rows="3" placeholder='Description announcement' required />
+							<input className='form-control col-12 mt-2 inputContact' ref={(data)=> this.txtContact = data} minLength={2} maxLength={40} type='text' placeholder='Contact data' required />
 						</div>
 						<div className="modal-footer d-flex justify-content-center">
 							<button type="button" className="btn btn-light" data-dismiss="modal">Close</button>

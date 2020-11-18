@@ -4,10 +4,21 @@ import ModalOpenAncmt from './ModalOpenAncmt';
 import ModalControlAncmt from './ModalControlAncmt';
 
 class ListAncmt extends Component {
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+      id: null
+    }
 
-  openItem() {
-    this.props.openAncmt(this.itemID.value)
+    this.openItem = this.openItem.bind(this)
   }
+  
+  openItem(id) {
+    this.setState({id: id})
+    //this.props.openAncmt(id)
+  }
+
 
   render() {
 
@@ -19,7 +30,7 @@ class ListAncmt extends Component {
               {ancmt.title}
               <input type='hidden' value={ancmt.id} ref={input=> this.itemID = input} />
               <div className="btn-group float-right" role="group" aria-label="Basic example"> 
-                  <button type="button" onClick={this.openItem.bind(this)} className="btn btn-outline-warning btn-sm" data-toggle="modal" data-target="#modalOpen">
+                  <button type="button" onClick={() => this.openItem(ancmt.id)} className="btn btn-outline-warning btn-sm" data-toggle="modal" data-target="#modalOpen">
                     <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" className="bi bi-menu-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                       <path fillRule="evenodd" d="M15 3.207v9a1 1 0 0 1-1 1h-3.586A2 2 0 0 0 9 13.793l-1 1-1-1a2 2 0 0 0-1.414-.586H2a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zm-13 11a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-3.586a1 1 0 0 0-.707.293l-1.353 1.354a.5.5 0 0 1-.708 0L6.293 14.5a1 1 0 0 0-.707-.293H2z"/>
                       <path fillRule="evenodd" d="M15 5.207H1v1h14v-1zm0 4H1v1h14v-1zm-13-5.5a.5.5 0 0 0 .5.5h6a.5.5 0 1 0 0-1h-6a.5.5 0 0 0-.5.5zm0 4a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11a.5.5 0 0 0-.5.5zm0 4a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 0-1h-8a.5.5 0 0 0-.5.5z"/>
@@ -36,7 +47,7 @@ class ListAncmt extends Component {
               </li>
           )}
         </ul>
-        <ModalOpenAncmt />
+        <ModalOpenAncmt propsID={this.state.id} />
         <ModalControlAncmt />
       </div>
     )
@@ -48,8 +59,8 @@ export default connect(
     ancmtsStore: state.ancmts
   }),
   dispatch => ({
-    openAncmt: (id) => {
-      dispatch({type: 'OPEN_ANCMT', payload: id})
-    }
+    // openAncmt: (id) => {
+    //   dispatch({type: 'OPEN_ANCMT', payload: id})
+    // }
   })
 )(ListAncmt)

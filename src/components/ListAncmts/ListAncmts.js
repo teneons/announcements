@@ -21,7 +21,7 @@ class ListAncmt extends Component {
 
             <div className="accordion-item" key={ancmt.id}>
               <h2 className="accordion-header" id="flush-headingOne">
-                <button className="accordion-button collapsed fw-bold bg-warning" type="button" data-toggle="collapse" data-target={'#'+ancmt.id} aria-expanded="false" aria-controls="flush-collapseOne">
+                <button className="accordion-button collapsed fw-bold bg-warning text-white" type="button" data-toggle="collapse" data-target={'#'+ancmt.id} aria-expanded="false" aria-controls="flush-collapseOne">
                   <svg width="1.2em" height="1.2em" viewBox="0 0 16 16" className="bi bi-info-square mr-1 text-white" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
                     <path fillRule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />

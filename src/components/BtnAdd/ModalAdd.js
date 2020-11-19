@@ -14,11 +14,10 @@ class ModalAdd extends Component {
 	};
 
   getsAllInputData() {
-		this.props.newAncmt(Math.random().toString(36).substr(2, 9), this.txtTitle.value, this.txtDate.value, this.txtDescription.value, this.txtContact.value);
-		this.txtTitle.value = ''
-		this.txtDate.value = ''
-		this.txtDescription.value = ''
-		this.txtContact.value = ''
+		this.props.newAncmt(Math.random().toString(36).substr(2, 9), this.txtTitle.value, this.adDate(), this.txtDescription.value, this.txtContact.value);
+		this.txtTitle.value = '';
+		this.txtDescription.value = '';
+		this.txtContact.value = '';
   }
 
 	render() {
@@ -35,7 +34,8 @@ class ModalAdd extends Component {
   								<path fillRule="evenodd" d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"/>
   								<path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4zM11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
 								</svg>
-							<span className='fw-bold' ref={(data)=> this.txtDate = data}>{this.adDate()}</span></span>
+							<span className='fw-bold disable'>{this.adDate()}</span>
+							</span>
 							<textarea className="form-control mt-2" ref={(data)=> this.txtDescription = data} minLength={2} maxLength={295} rows="3" placeholder='Description announcement' required />
 							<input className='form-control col-12 mt-2 inputContact' ref={(data)=> this.txtContact = data} minLength={2} maxLength={40} type='text' placeholder='Contact data' required />
 						</div>
@@ -53,8 +53,8 @@ class ModalAdd extends Component {
 export default connect(
 	state => ({}),
 	dispatch => ({
-		newAncmt: (id, title, date, discription, contact) => {
-			dispatch({type: 'ADD_NEW_ANCMT', payload: {id: id, title: title, date: date, discription: discription, contact: contact}})
+		newAncmt: (id, title, date, description, contact) => {
+			dispatch({type: 'ADD_NEW_ANCMT', payload: {id: id, title: title, date: date, description: description, contact: contact}})
 		}
 	})
 )(ModalAdd);

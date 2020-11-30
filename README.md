@@ -4,7 +4,7 @@
 
 
 + **Project name -** `Announcements`
-+ **Demo -** **[HERE](https://teneons.github.io/ancmts-gh-page/)**
++ **Demo -** **[HERE](https://ancmts.herokuapp.com/)**
 + **How to run:**
   - npm start
   - npm install redux
